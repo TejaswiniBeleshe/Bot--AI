@@ -1,0 +1,32 @@
+.navDiv{
+    width: 25%;
+    border: 1px solid rgb(163, 161, 161);
+    height: 100%;
+
+}
+.navContent{
+    background-color: #D7C7F4;
+    padding: .6rem;
+}
+.navBtn{
+   
+    width: 60%;
+    padding: .5rem;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 1rem;
+}
+.logoDiv{
+    border-radius: 50%;
+}
+
+.logoDiv img{
+    border-radius: 50%;
+}
+
+@media(max-width:476px){
+    .navDiv{
+        width: 15%;
+        background-image: linear-gradient(#dad6e2,#e7e5ec);
+    }
+}

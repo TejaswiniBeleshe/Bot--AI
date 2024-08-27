@@ -1,0 +1,22 @@
+.initial{
+    border: 1px solid rgb(54, 185, 18);
+    
+}
+.iniHeading{
+    margin: 1.2rem 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.queDemo{
+    border: 1px solid rgb(54, 185, 18);
+
+}
+
+.logoDiv{
+    border-radius: 50%;
+}
+
+.logoDiv img{
+    border-radius: 50%;
+}

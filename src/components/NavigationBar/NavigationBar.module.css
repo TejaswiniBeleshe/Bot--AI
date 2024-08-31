@@ -23,6 +23,9 @@
 .logoDiv img{
     border-radius: 50%;
 }
+.txtD{
+    text-decoration: none;
+}
 
 @media(max-width:476px){
     .navDiv{

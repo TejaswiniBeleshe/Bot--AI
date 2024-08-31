@@ -24,7 +24,6 @@ const Initial = ()=>{
                     })
                 }
                 
-
             </div>
 
         </div>

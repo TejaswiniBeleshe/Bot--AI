@@ -1,0 +1,35 @@
+.ansCard{
+    /* border: 2px solid purple; */
+    width: 98%;
+    padding: .5rem;
+    min-height: 20%;
+    margin: .5rem;
+    background-color: #D7C7F4;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px;
+}
+.logoDiv{
+    border-radius: 50%;  
+}
+.logoDiv img{
+    border-radius: 50%;
+}
+.imgDiv{
+    /* border: 1px solid yellow; */
+}
+.ansDiv{
+    /* border: 1px solid greenyellow; */
+    height: 100%;
+    width: 100%;
+    margin-left: .5rem;
+   
+}
+.text{
+    overflow-y: auto;
+
+}
+/* @media(max-width:476px){
+    .ansCard{
+        margin-right: 0rem;
+    }
+} */

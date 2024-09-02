@@ -9,11 +9,13 @@
   width:75%;
   height: 100%;
   background-image: linear-gradient(#dad6e2,#e7e5ec);
+  border-left: 1px solid rgb(163, 161, 161);
 }
 
 @media(max-width:475px){
   .mainDiv{
     width: auto;
+    
     overflow:hidden;
   }
 }

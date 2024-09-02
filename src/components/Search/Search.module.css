@@ -1,6 +1,8 @@
 .searchDiv{
     /* border: 1px solid yellow; */
     height: 12%;
+    position: fixed;
+
 }
 .ipDiv{
     min-width: 75%;

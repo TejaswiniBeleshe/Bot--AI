@@ -1,7 +1,7 @@
 .searchDiv{
     /* border: 1px solid yellow; */
     height: 12%;
-    position: fixed;
+    /* position: fixed; */
 
 }
 .ipDiv{
@@ -37,6 +37,7 @@ button{
 @media(max-width:900px) {
     .searchDiv{
         padding: 0 .5rem;
+        height: 15%;
     }
     .btn{
         width: 40px;

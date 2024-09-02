@@ -1,6 +1,6 @@
 .navDiv{
     width: 25%;
-    border: 1px solid rgb(163, 161, 161);
+    border-right: 1px solid rgb(163, 161, 161);
     height: 100%;
 
 }
@@ -27,9 +27,9 @@
     text-decoration: none;
 }
 
-@media(max-width:476px){
+@media(max-width:970px){
     .navDiv{
-        width: 15%;
+        max-width:20%;
         background-image: linear-gradient(#dad6e2,#e7e5ec);
     }
 }

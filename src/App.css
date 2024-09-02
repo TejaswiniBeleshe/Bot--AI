@@ -1,18 +1,19 @@
 .App {
-  /* text-align: center; */
-  border: 2px solid red;
-  /* height: 100vh; */
-
   width: 100%;
   height:100vh;
   overflow-y: auto;
-  border: 1px solid green;
-  /* height: 100vh; */
+ 
 }
 .mainDiv{
-  border: 1px solid purple;
-  width: 75%;
+  /* border: 1px solid purple; */
+  width:75%;
   height: 100%;
   background-image: linear-gradient(#dad6e2,#e7e5ec);
 }
 
+@media(max-width:475px){
+  .mainDiv{
+    width: auto;
+    overflow-x: hidden;
+  }
+}

@@ -9,24 +9,20 @@ const Home = ()=>{
     const {feedBack,setFeedBack,showModel,setShowModel,allList,setAllList} = useContext(aiContent)
     const [targetId,setTargetId] = useState();
     const handleShow = (id)=>{
-        //  console.log(id);
-        setTargetId(id)
-
+    
+        setTargetId(id);
         setShowModel(true)
     }
     const handleClose = ()=>{
-        // console.log(id)
+        
         let addFeedBack = allList.map((ele)=>{
             if(ele.id === targetId){
                 ele.fb = feedBack;
-                // console.log(feedBack)
-                // console.log(ele)
                 return {...ele};
             }else return ele;
             
         })
-        // setAllList(...addFeedBack)
-        // setAllList(addFeedBack)
+      
         console.log(addFeedBack,'my feed back has added');
         setFeedBack('');
         
@@ -35,10 +31,10 @@ const Home = ()=>{
     }
     return(
         
-        <div className='mainDiv' style={{border:"1px solid blue"}}> 
+        <div className='mainDiv' > 
           <Header/>
-          <BotContent handleShow={handleShow}/>
-          <Search handleClose={handleClose}/>
+          <BotContent handleShow={handleShow} handleClose={handleClose}/>
+          <Search />
        </div>
         
     )

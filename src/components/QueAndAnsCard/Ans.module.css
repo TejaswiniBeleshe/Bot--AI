@@ -1,5 +1,5 @@
 .ansCard{
-    /* border: 2px solid purple; */
+   
     width: 98%;
     padding: .5rem;
     min-height: 20%;
@@ -14,9 +14,7 @@
 .logoDiv img{
     border-radius: 50%;
 }
-.imgDiv{
-    /* border: 1px solid yellow; */
-}
+
 .ansDiv{
     /* border: 1px solid greenyellow; */
     height: 100%;

@@ -2,9 +2,8 @@ import React from "react";
 import styles from "./QueryCard.module.css";
 import ULogo from "../../assets/user.png"
 const QueryCard = ({q,t})=>{
-    let d = new Date();
-    let h = d.getHours();
-    let m = d.getMinutes();
+  
+   
     return(
         <div className={`${styles.queryCard} d-flex`}>
             <div className={styles.imgDiv}>
@@ -15,7 +14,7 @@ const QueryCard = ({q,t})=>{
                 <h5>You</h5>
                 <span>{q}</span>
                 </div>
-                <span>{t} AM</span>
+                <span>{t} {t>='12'?"PM":"AM"}</span>
             </div>
         </div>
     )

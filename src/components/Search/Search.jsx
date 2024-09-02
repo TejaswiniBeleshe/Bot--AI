@@ -1,26 +1,52 @@
-import React, { useContext,memo, useState} from "react";
+import React, { useContext} from "react";
 import styles from "./Search.module.css"
 import { aiContent } from "../../App";
 import allData from "../../mockedData.json"
-import Model from "../Model/Model";
-const Search = ({handleClose})=>{
-   
-    const {ipState,setIpState,curAns,setCurAns,curQue,setCurQue,allList,setAllList,prevData,setPrevData,showModel,setShowModel,feedBack,setFeedBack} = useContext(aiContent);
+
+const Search = ()=>{
+    const {ipState,setIpState,allList,setAllList,setPrevData} = useContext(aiContent);
     let d = new Date();
     let h = d.getHours();
     let m = d.getMinutes();
     const handleAsk = ()=>{
     //    setCurQue(ipState);
-       let ansForQue =  allData.find(ele=>{
-                //   console.log(ele);
-                  return ele.question.toLowerCase().includes(ipState.toLowerCase()+" ");
-                //   return "As an AI Language Model, I don't have the details";
-        });
+    //    let ansForQue =  allData.find(ele=>{
+    //             //   console.log(ele);
+    //               return ele.question.toLowerCase().includes(ipState.toLowerCase()+" ");
+    //             //   return "As an AI Language Model, I don't have the details";
+    //     });
         
-        console.log(ansForQue,"res")
+    //     console.log(ansForQue,"res")
+    if(ipState.trim() === ''){
+        alert('please clarify you query!')
+        return
+    }
+
+    let arr = ipState.toLowerCase().split(' ');
+    console.log(arr);
+    let res,max=0;
+    for(let i=0;i<allData.length;i++){
+        let c=0;
+        let a = allData[i].question.toLowerCase().split(' ');
+        // console.log(a)
+        for(let j=0;j<a.length;j++){
+          if(arr.includes(a[j])){
+            c+=1;
+          }
+        }
+        console.log(c)
+        if(c>max){
+          max=c;
+          res = allData[i]
+        }
+    }
+    //   console.log(res)
+    if(arr.length > 2 && max < 2){
+        res = {}
+    }
         
-        if(ansForQue &&ansForQue.hasOwnProperty("response")){
-           setAllList([...allList,{id:Date.now(),q:ipState,a:ansForQue.response,t:`${h}:${m}`}]);
+        if(res && res.hasOwnProperty("response")){
+           setAllList([...allList,{id:Date.now(),q:ipState,a:res.response,t:`${h}:${m}`}]);
         }else{
            setAllList([...allList,{id:Date.now(),q:ipState,a:"As an AI Language Model, I don't have the details",t:`${h}:${m}`}])
         }
@@ -28,7 +54,7 @@ const Search = ({handleClose})=>{
     }
     const handleSave = ()=>{ 
         setPrevData([...allList]);
-        console.log('saved all');    
+        // console.log('saved all');    
     }
    
     return(
@@ -40,7 +66,7 @@ const Search = ({handleClose})=>{
             <button className={styles.btn} onClick={handleAsk}>Ask</button>
             <button className={styles.btn} onClick={handleSave}>Save</button>
         </div>
-        {showModel?<Model handleClose={handleClose} feedBack={feedBack} setFeedBack={setFeedBack} />:""}
+        
         </>
     )
 }

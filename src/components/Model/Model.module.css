@@ -20,10 +20,27 @@
     background-color: #EFEFEF;
     width: 30%;
     padding: 2rem;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     border-radius: 12px;
 }
+.modalContainer button{
+  width:50%;
+  margin: auto;
+  margin-top: .5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(196, 190, 190);
+  padding: .5rem;
+}
   
+@media(max-width:950px){
+  .modalContainer{
+    width: 70%;
+    height: auto;
+  }
+  
+}
+
   
 
   /* .form{

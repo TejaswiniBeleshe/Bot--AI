@@ -8,12 +8,12 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import PrevData from './components/PrevData/PrevData';
 import Home from './components/Home';
-import P from './components/P';
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
       <Route path="" element={<Home/>}/>
-      {/* <Route path='prev' element={<PrevData/>}/> */}
+     
       <Route path="prev" element={<PrevData/>}/>
     </Route>
   )

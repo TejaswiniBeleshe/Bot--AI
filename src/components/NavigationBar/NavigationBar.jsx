@@ -16,7 +16,6 @@ const  NavigationBar = ()=>{
   const {setAllList} = useContext(aiContent);
     const handleNewChat = ()=>{
       setAllList([]);
-
     }
     return(   
      <div className={styles.navDiv} >
@@ -24,17 +23,17 @@ const  NavigationBar = ()=>{
         <Navbar key={expand} expand={expand} className="mb-3">
           <Container fluid>
             {/* <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand> */}
-            <Navbar.Toggle className='w-100' aria-controls={`offcanvasNavbar-expand-${expand}`}/>
+            <Navbar.Toggle className='w-auto' aria-controls={`offcanvasNavbar-expand-${expand}`}/>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="start"
             >
               <Offcanvas.Header closeButton> 
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className=' w-100 d-flex justify-content-between align-items-center' style={{border:"1px solid red"}}>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className='w-100 d-flex justify-content-between align-items-center' >
 
                    <span className={styles.logoDiv}><img src={AILogo} width="40px" height="40px"/></span>
-                   <NavLink to="/"  className={styles.txtD}><h5>New Chat</h5></NavLink>
+                   <NavLink to="/" className={styles.txtD} onClick={handleNewChat}><h5>New Chat</h5></NavLink>
                    <span><FiEdit size={30}/></span>
               
                 </Offcanvas.Title>

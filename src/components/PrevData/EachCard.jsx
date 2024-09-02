@@ -1,11 +1,10 @@
 import React from "react";
 import styles from "./EachCard.module.css";
-import { BsHandThumbsUp } from "react-icons/bs";
-import { BsHandThumbsDown } from "react-icons/bs";
+
 import ULogo from "../../assets/user.png"
 import AILogo from "../../assets/logo.png"
-import { FaStar } from "react-icons/fa6";
-import "../Ratings/Ratings.css"
+import { FaStar } from "react-icons/fa6"
+
 const EachCard = ({ele})=>{
     return(
         <div className={`${styles.eachPrevDiv}`}>
@@ -19,7 +18,7 @@ const EachCard = ({ele})=>{
                 <h5>You</h5>
                 <span>{ele.q}</span>
                 </div>
-                <span>{ele.t} AM</span>
+                <span>{ele.t} {ele.t>='12'?"PM":"PM"}</span>
             </div>
            </div>
 
@@ -39,12 +38,12 @@ const EachCard = ({ele})=>{
                    </div>
                 </div>
                 <div>
-                {
+                {ele.rate?
                 [...Array(5)].map((_,i)=>{
                     i+=1;
                     console.log(ele.rate)
-                    return <FaStar className={i <= (ele.rate) ? 'active' : 'inactive'} key={i} size={15} />
-                })
+                    return <FaStar className={i <= (ele.rate) ? `${styles.active}` : 'inactive'} key={i} size={15} />
+                }):""
             }
 
                 </div>

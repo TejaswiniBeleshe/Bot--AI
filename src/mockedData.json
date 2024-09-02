@@ -1,4 +1,19 @@
 [
+  {
+    "id":51,
+    "question":"Hi",
+    "response":"How can i assist you today!"
+},
+{
+  "id":52,
+  "question":"How are you",
+  "response":"Good, how can i assist you today!"
+},
+{
+  "id":51,
+  "question":"Good afternoon",
+  "response":"Afternoon, how can i help you"
+},
     {
       "id": 1,
       "question": "What's the difference between GET and POST requests?",
@@ -248,11 +263,7 @@
       "id": 50,
       "question": "How do you stay updated with the latest technology trends?",
       "response": "Staying updated involves following industry news, participating in developer communities, attending conferences and workshops, taking online courses, reading technical blogs and publications, and experimenting with new technologies and tools."
-    },
-    {
-        "id":51,
-        "question":"Hi",
-        "response":"How can i assist you today!"
     }
+    
   ]
   
